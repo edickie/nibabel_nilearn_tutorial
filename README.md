@@ -48,11 +48,12 @@ conda install seaborn
 conda install docopt
 conda install jupyter
 pip install qbatch  # an extra package for running things in parallel on the GPC
+conda install pyyaml # only need it for cifitfy on Friday..
 source deactivate
 ```
 
 ## the SciNet set-up script contains..
 
 1. creates a sym-link from the tutorial conda env to your SciNet home
-2. cp the the scripts into your SciNet 
+2. cp the the scripts into your SciNet
 3. link the data into your SciNet $SRATCH
