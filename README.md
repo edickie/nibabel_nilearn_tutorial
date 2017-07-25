@@ -9,7 +9,7 @@ Note in the example below..we are naming our environment "mripython" but you can
 
 ```
 conda create -n mripython3.5 python=3.5
-source activate mripython
+source activate mripython3.5
 conda install -c conda-forge nilearn
 conda install seaborn
 conda install docopt
@@ -25,7 +25,7 @@ The version available in conda-forge is a year old.. newer released are availabl
 
 ```
 conda create -n mripython3.6 python=3.6
-source activate mripython
+source activate mripython3.6
 conda install scikit-learn
 conda install seaborn
 pip install nibabel
