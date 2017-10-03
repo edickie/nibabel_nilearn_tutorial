@@ -34,6 +34,33 @@ conda install docopt
 conda install jupyter
 ```
 
+## FYI when doing this on the CAMH SCC cluster here are the lines you need
+
+```sh
+## loads conda
+module load PYTHON/3.6
+
+## create the conda env into ${HOME}/.conda/envs/ with name 3.6_nilearn_01
+conda create -n 3.6_nilearn_01 python=3.6
+
+## activates that conda environment
+source activate 3.6_nilearn_01
+
+## install the packages - note jupyter is needed for us to be able to use it on jyputer hub
+conda install jupyter
+conda install scikit-learn
+conda install seaborn
+pip install nibabel
+pip install nilearn
+conda install docopt
+
+## adds the 3.6_nilearn_01 environment to the kernels available by jupyter hub
+python -m ipykernel install --user --name 3.6_nilearn_01 --display-name "Python (3.6_nilearn_01)"
+
+## deactivate the conda environment
+source deactivate
+```
+
 ## FYI when doing this on SciNet...there are a couple of little changes you can do
 
 + you need to load the anaconda3 module first
