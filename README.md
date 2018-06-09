@@ -67,7 +67,14 @@ source deactivate
 + here we specified the full path to the conda env we want to build
 
 ```
-module load anaconda3
+   10  module load python/3.6.4-anaconda5.1.0
+   11  conda create --name mripython3
+   12  source activate mripython3
+   13  pip install nilearn
+   14  conda install -c conda-forge nilearn
+   15  conda install jupyter
+
+module load python/3.6.4-anaconda5.1.0
 conda create -p /scinet/course/ss2017/16_mripython/conda_envs/mripython3.5 python=3.5
 source activate /scinet/course/ss2017/16_mripython/conda_envs/mripython3.5/
 conda install -c conda-forge nilearn
