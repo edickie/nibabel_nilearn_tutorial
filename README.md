@@ -63,30 +63,41 @@ source deactivate
 
 ## FYI when doing this on SciNet...there are a couple of little changes you can do
 
-+ you need to load the anaconda3 module first
++ you need to load the python/*anaconda* module first
 + here we specified the full path to the conda env we want to build
 
 ```
-   10  module load python/3.6.4-anaconda5.1.0
-   11  conda create --name mripython3
-   12  source activate mripython3
-   13  pip install nilearn
-   14  conda install -c conda-forge nilearn
-   15  conda install jupyter
-
 module load python/3.6.4-anaconda5.1.0
-conda create -p /scinet/course/ss2017/16_mripython/conda_envs/mripython3.5 python=3.5
-source activate /scinet/course/ss2017/16_mripython/conda_envs/mripython3.5/
+conda create -p /scinet/course/ss2018/3_bm/1_mripython/conda_envs/coss2018_mri python=3.6
+source activate /scinet/course/ss2018/3_bm/1_mripython/conda_envs/coss2018_mri
 conda install -c conda-forge nilearn
 conda install seaborn
 conda install docopt
 conda install jupyter
 pip install qbatch  # an extra package for running things in parallel on the GPC
-conda install pyyaml # only need it for cifitfy on Friday..
 source deactivate
 ```
 
-## the SciNet set-up script contains..
+## Connecting to the SciNet jupyter hub..
+
+First you need to ssh to one of the niagara nodes to clone this repo
+
+```sh
+ssh USERNAME@niagara.scinet.utoronto.ca
+git clone 
+```
+
+Open a terminal on your laptop (can be mobaxterm on a Windows laptops)
+(with USERNAME replaced by your compute username)
+
+You will be prompted for you SciNet PASSWORD
+
+```sh
+ssh -L8888:tds04:8000 USERNAME@niagara.scinet.utoronto.ca -N
+```
+
+Once if you did this properly. It will look like nothing happend. **KEEP THIS TERMINAL OPEN**. And point your local browser to "localhost:8888
+
 
 1. creates a sym-link from the tutorial conda env to your SciNet home
 2. cp the the scripts into your SciNet
