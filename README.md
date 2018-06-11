@@ -9,6 +9,8 @@ First you need to ssh to one of the niagara nodes to clone this repo
 ```sh
 ssh USERNAME@niagara.scinet.utoronto.ca
 git clone 
+mkdir ~/.conda/envs
+ln -s /scinet/course/ss2018/3_bm/1_mripython/conda_envs/coss2018_mri ~/.conda/envs/coss2018_mri
 ```
 
 Open a terminal on your laptop (can be mobaxterm on a Windows laptops)
