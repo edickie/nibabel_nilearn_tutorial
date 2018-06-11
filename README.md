@@ -1,5 +1,28 @@
-# nibabel_nilearn_tutorial_2017
-Materials for an intro to neuroimaging in python tutorial from Toronto, july 2017
+
+# nibabel_nilearn_tutorial
+Materials for an intro to neuroimaging in python tutorial from, orignally given at the Compute Ontario Summer School Toronto, july 2017
+
+## Connecting to the SciNet jupyter hub..
+
+First you need to ssh to one of the niagara nodes to clone this repo
+
+```sh
+ssh USERNAME@niagara.scinet.utoronto.ca
+git clone 
+```
+
+Open a terminal on your laptop (can be mobaxterm on a Windows laptops)
+(with USERNAME replaced by your compute username)
+
+You will be prompted for you SciNet PASSWORD
+
+```sh
+ssh -L8888:tds04:8000 USERNAME@niagara.scinet.utoronto.ca -N
+```
+
+Once if you did this properly. It will look like nothing happend. **KEEP THIS TERMINAL OPEN**. And point your local browser to "localhost:8888
+
+# If not using the SciNet jupyter hub, you can build the environment for this tutorial 
 
 ## building the python environment for this tutorial..
 
@@ -77,28 +100,3 @@ conda install jupyter
 pip install qbatch  # an extra package for running things in parallel on the GPC
 source deactivate
 ```
-
-## Connecting to the SciNet jupyter hub..
-
-First you need to ssh to one of the niagara nodes to clone this repo
-
-```sh
-ssh USERNAME@niagara.scinet.utoronto.ca
-git clone 
-```
-
-Open a terminal on your laptop (can be mobaxterm on a Windows laptops)
-(with USERNAME replaced by your compute username)
-
-You will be prompted for you SciNet PASSWORD
-
-```sh
-ssh -L8888:tds04:8000 USERNAME@niagara.scinet.utoronto.ca -N
-```
-
-Once if you did this properly. It will look like nothing happend. **KEEP THIS TERMINAL OPEN**. And point your local browser to "localhost:8888
-
-
-1. creates a sym-link from the tutorial conda env to your SciNet home
-2. cp the the scripts into your SciNet
-3. link the data into your SciNet $SRATCH
